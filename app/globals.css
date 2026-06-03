@@ -1,0 +1,627 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ecddcd;
+  --foreground: #2e2117;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #ecddcd;
+  color: #2e2117;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.page-main {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px 20px 56px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Mobile Safari: min-height main must not steal touches below content */
+@media (hover: none) and (pointer: coarse) {
+  .page-main {
+    pointer-events: none;
+  }
+
+  .page-main > * {
+    pointer-events: auto;
+  }
+}
+
+.page-main--home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Centered content column — all inner pages */
+.page-shell {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Back link — top of page content, scrolls with page */
+.page-back-row {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.page-heading-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 18px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.page-heading-centered--tight {
+  margin-bottom: 6px;
+}
+
+.page-heading-centered__icon {
+  flex: 0 0 32px;
+  width: 32px;
+  text-align: center;
+}
+
+.page-heading-centered__text {
+  flex: 0 1 auto;
+  text-align: center;
+}
+
+/* Fixed side slots so label text stays horizontally centered */
+.menu-btn-slot {
+  flex: 0 0 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.menu-btn-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+}
+
+.back-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 88px;
+  padding: 8px 0;
+  border: 1px solid rgba(184, 138, 59, 0.25);
+  border-radius: 12px;
+  background: rgba(236, 221, 205, 0.85);
+  color: #2e2117;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.back-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* Shared press / hover scale for clickable controls */
+.btn-press {
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-press:hover {
+  transform: scale(1.03);
+}
+
+.btn-press:active {
+  transform: scale(0.98);
+}
+
+/* Premium menu button — home & recommend */
+.premium-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  height: 56px;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid rgba(184, 138, 59, 0.25);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.35);
+  color: #2e2117;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.premium-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.52);
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.premium-menu-btn:active {
+  transform: scale(0.98);
+}
+
+.premium-menu-btn__arrow {
+  color: #b88a3b;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Brand story text link — home only */
+.story-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 4px 0;
+  color: #8b6a3b;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.story-text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Combo confirm CTA */
+.menu-card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.menu-card-stack .premium-menu-btn {
+  font-size: 1.035rem;
+}
+
+/* Recommend page — emoji in fixed slot, label centered */
+.category-card-link__emoji {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.recommend-category-divider {
+  width: 100%;
+  max-width: 360px;
+  margin: 4px auto;
+  border: none;
+  border-top: 1px solid rgba(184, 138, 59, 0.35);
+}
+
+/* Category combo list cards */
+.combo-list-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.combo-list-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.combo-list-card:active {
+  transform: scale(0.98);
+}
+
+/* A/B drink — single compact paper card (max ~120px) */
+.drink-cards-panel.menu-paper-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 14px 16px 12px;
+  border: 1px solid rgba(184, 138, 59, 0.25);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.combo-contents-menu .menu-gold-line {
+  width: 72%;
+}
+
+.combo-contents-menu {
+  border-radius: 20px;
+}
+
+/* Home page — zh title */
+.home-page-title-zh {
+  margin: 0 0 6px;
+  font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #2e2117;
+  text-align: center;
+}
+
+/* zh recommend page title — two lines */
+.recommend-page-title-zh-block {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.recommend-page-title-zh {
+  margin: 0 0 8px;
+  font-family: "Noto Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #2e2117;
+}
+
+.recommend-page-title-en {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: #b88a3b;
+  text-transform: uppercase;
+}
+
+/* Result page — refined mini cards */
+.result-mini-card {
+  padding: 16px 18px 14px;
+}
+
+.result-mini-card.drink-cards-panel {
+  padding: 14px 16px 12px;
+}
+
+.result-mini-card.signature-sides-panel {
+  padding: 14px 16px 12px;
+}
+
+.drink-cards-panel__title {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  color: #2e2117;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.drink-cards-panel__cols {
+  display: flex;
+  align-items: center;
+  min-height: 0;
+}
+
+.drink-cards-panel__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  text-align: center;
+}
+
+.drink-cards-panel__divider {
+  flex-shrink: 0;
+  width: 1px;
+  align-self: stretch;
+  margin: 2px 0;
+  background: rgba(184, 138, 59, 0.25);
+}
+
+.drink-cards-panel__name {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #2e2117;
+  line-height: 1.35;
+}
+
+.drink-cards-panel__flavor {
+  margin: 0;
+  font-size: 0.65rem;
+  line-height: 1.35;
+  color: #6e5a47;
+}
+
+.drink-cards-panel__footnote {
+  margin: 6px 0 0;
+  padding-top: 6px;
+  border-top: 1px solid rgba(184, 138, 59, 0.25);
+  font-size: 0.65rem;
+  line-height: 1.4;
+  text-align: center;
+  color: #6e5a47;
+}
+
+/* Result page — even vertical rhythm */
+.result-page-section > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.result-page-section .combo-contents-menu,
+.result-page-section .drink-cards-panel,
+.result-page-section .signature-sides-panel,
+.result-page-section .image-placeholder-zone {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Dongshi region — single footnote below all items */
+.dongshi-region-footnote-wrap {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0 4px;
+}
+
+.dongshi-region-footnote__line {
+  width: 72%;
+  margin: 10px auto 8px;
+  border: none;
+  border-top: 1px solid rgba(184, 138, 59, 0.25);
+}
+
+.dongshi-region-footnote {
+  margin: 0;
+  font-size: 0.62rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #8b7359;
+  letter-spacing: 0.02em;
+}
+
+.popular-addon-notes {
+  width: 100%;
+  max-width: 360px;
+  margin: 4px auto 0;
+}
+
+.popular-addon-notes .popular-addon-footnote {
+  margin-top: 10px;
+}
+
+.signature-sides-panel .dongshi-region-footnote-wrap {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* Popular add-ons — category grid */
+.popular-addon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.popular-addon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 12px;
+  text-align: center;
+}
+
+.popular-addon-card__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 72px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background: #e2d2c0;
+  border: 1px solid rgba(184, 138, 59, 0.2);
+}
+
+.popular-addon-card__image-text {
+  font-size: 0.65rem;
+  color: #6e5a47;
+  letter-spacing: 0.02em;
+}
+
+.popular-addon-card__name {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #2e2117;
+  letter-spacing: 0.02em;
+}
+
+.popular-addon-footnote {
+  width: 100%;
+  max-width: 360px;
+  margin: 18px auto 0;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #6e5a47;
+}
+
+/* Signature sides — result page compact reminder */
+.signature-sides-panel {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 14px 16px 12px;
+  text-align: center;
+}
+
+.signature-sides-panel__title {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #2e2117;
+  line-height: 1.35;
+}
+
+.signature-sides-panel__intro {
+  margin: 0 0 10px;
+  font-size: 0.68rem;
+  line-height: 1.45;
+  color: #6e5a47;
+}
+
+.signature-sides-panel__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.signature-sides-panel__item {
+  font-size: 0.68rem;
+  line-height: 1.4;
+  color: #2e2117;
+  letter-spacing: 0.02em;
+}
+
+.signature-sides-panel__footnote {
+  margin: 8px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(184, 138, 59, 0.25);
+  font-size: 0.65rem;
+  line-height: 1.45;
+  text-align: center;
+  color: #6e5a47;
+}
+
+/* Brand story — home footer card (matches language buttons) */
+.story-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  height: 56px;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid rgba(184, 138, 59, 0.35);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.35);
+  color: #2e2117;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.story-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.52);
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.story-menu-btn:active {
+  transform: scale(0.98);
+}
+
+/* Combo confirm CTA */
+.combo-primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  margin: 12px auto 0;
+  padding: 16px 0;
+  border: none;
+  border-radius: 18px;
+  background: #3a2418;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.combo-primary-btn:hover {
+  background: #2e1a10;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+  transform: scale(1.03);
+}
+
+.combo-primary-btn:active {
+  transform: scale(0.98);
+}
+
+.combo-primary-btn .menu-btn-label {
+  padding: 0 12px;
+}
