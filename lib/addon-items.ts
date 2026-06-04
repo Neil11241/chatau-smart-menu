@@ -1,3 +1,4 @@
+import { BRAISED_MILKFISH_BELLY } from "./braised-milkfish-belly";
 import { CRISPY_CHICKEN_LEG_ROLL } from "./chicken-leg-roll";
 import { STUFFED_BITTER_MELON } from "./stuffed-bitter-melon";
 import { WASABI_OYSTERS } from "./wasabi-oysters";
@@ -31,12 +32,7 @@ export const POPULAR_ADDONS: PopularAddon[] = [
   },
   {
     code: "E",
-    name: {
-      zh: "東石鮮蚵湯",
-      en: "Dongshi Fresh Oyster Soup",
-      ja: "東石の鮮蚵スープ",
-      ko: "동스 생굴 국",
-    },
+    name: BRAISED_MILKFISH_BELLY,
   },
   {
     code: "F",

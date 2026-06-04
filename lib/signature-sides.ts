@@ -1,3 +1,4 @@
+import { BRAISED_MILKFISH_BELLY } from "./braised-milkfish-belly";
 import {
   CRISPY_CHICKEN_LEG_ROLL,
   formatAddonItemLabel,
@@ -20,7 +21,7 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
     items: [
       "C｜滷白菜",
       "D｜綜合滷味",
-      "E｜東石鮮蚵湯",
+      formatAddonItemLabel("E", BRAISED_MILKFISH_BELLY, "zh"),
       formatAddonItemLabel("F", STUFFED_BITTER_MELON, "zh"),
       "G｜東石芥末鮮蚵",
       formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "zh"),
@@ -33,7 +34,7 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
     items: [
       "C｜Braised Napa Cabbage",
       "D｜Assorted Braised Platter",
-      "E｜Dongshi Fresh Oyster Soup",
+      formatAddonItemLabel("E", BRAISED_MILKFISH_BELLY, "en"),
       formatAddonItemLabel("F", STUFFED_BITTER_MELON, "en"),
       formatAddonItemLabel("G", WASABI_OYSTERS, "en"),
       formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "en"),
@@ -47,7 +48,7 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
     items: [
       "C｜白菜の煮込み",
       "D｜盛り合わせ煮込み",
-      "E｜東石の鮮蚵スープ",
+      formatAddonItemLabel("E", BRAISED_MILKFISH_BELLY, "ja"),
       formatAddonItemLabel("F", STUFFED_BITTER_MELON, "ja"),
       formatAddonItemLabel("G", WASABI_OYSTERS, "ja"),
       formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "ja"),
@@ -61,7 +62,7 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
     items: [
       "C｜배추 조림",
       "D｜종합 조림 모둠",
-      "E｜동스 생굴 국",
+      formatAddonItemLabel("E", BRAISED_MILKFISH_BELLY, "ko"),
       formatAddonItemLabel("F", STUFFED_BITTER_MELON, "ko"),
       "G｜동스 겨자 생굴",
       formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "ko"),
