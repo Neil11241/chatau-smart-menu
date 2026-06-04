@@ -45,7 +45,7 @@ export const ui: Record<
   },
   ja: {
     back: "戻る",
-    backHome: "ホームに戻る",
+    backHome: "ホームへ戻る",
     comboContents: "セット内容",
     wantThisCombo: "このセットにする",
     yourRecommendation: "🎉 おすすめセット",

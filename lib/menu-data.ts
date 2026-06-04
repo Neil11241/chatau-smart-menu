@@ -37,17 +37,17 @@ export const CATEGORIES: Category[] = [
     emoji: "🍚",
     label: {
       zh: "想吃飽",
-      en: "Hearty Meal",
+      en: "Make it Full",
       ja: "お腹いっぱい",
       ko: "배부르게",
     },
   },
   {
     id: "light",
-    emoji: "🥗",
+    emoji: "✨",
     label: {
       zh: "想吃清爽",
-      en: "Light & Fresh",
+      en: "Make it Light",
       ja: "さっぱり",
       ko: "가볍게",
     },
@@ -74,10 +74,10 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "popular-addons",
-    emoji: "🍽",
+    emoji: "🥢",
     label: {
       zh: "店內人氣招牌",
-      en: "House Specialties",
+      en: "House Appetizers",
       ja: "店内人気メニュー",
       ko: "매장 인기 메뉴",
     },

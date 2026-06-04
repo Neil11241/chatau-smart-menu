@@ -119,9 +119,11 @@ export default async function ResultPage({ params }: Props) {
           </p>
         </CenteredContentCard>
 
-        <StoryMenuLink href="/" icon={<span aria-hidden>←</span>}>
-          {ui.backHome}
-        </StoryMenuLink>
+        <div className="page-back-home-row">
+          <StoryMenuLink href="/" backHome>
+            {ui.backHome}
+          </StoryMenuLink>
+        </div>
       </PageSection>
     </InnerPage>
   );

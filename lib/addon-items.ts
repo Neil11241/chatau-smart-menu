@@ -1,4 +1,6 @@
 import { CRISPY_CHICKEN_LEG_ROLL } from "./chicken-leg-roll";
+import { STUFFED_BITTER_MELON } from "./stuffed-bitter-melon";
+import { WASABI_OYSTERS } from "./wasabi-oysters";
 import type { Lang, LocalizedText } from "./types";
 
 export const POPULAR_ADDONS_CATEGORY_ID = "popular-addons";
@@ -38,21 +40,11 @@ export const POPULAR_ADDONS: PopularAddon[] = [
   },
   {
     code: "F",
-    name: {
-      zh: "苦瓜封湯",
-      en: "Bitter Melon Sealed Soup",
-      ja: "苦瓜封湯",
-      ko: "여주 봉탕",
-    },
+    name: STUFFED_BITTER_MELON,
   },
   {
     code: "G",
-    name: {
-      zh: "東石芥末鮮蚵",
-      en: "Dongshi Mustard Fresh Oysters",
-      ja: "東石の芥子味鮮蚵",
-      ko: "동스 겨자 생굴",
-    },
+    name: WASABI_OYSTERS,
   },
   {
     code: "H",

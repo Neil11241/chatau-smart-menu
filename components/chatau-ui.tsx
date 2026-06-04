@@ -177,18 +177,56 @@ export function StoryMenuLink({
   href,
   icon,
   children,
+  hideStartSlot = false,
+  hideEndArrow = false,
+  backHome = false,
 }: {
   href: string;
   icon?: ReactNode;
   children: ReactNode;
+  hideStartSlot?: boolean;
+  hideEndArrow?: boolean;
+  /** Result / story: ← fixed left, label centered */
+  backHome?: boolean;
 }) {
+  if (backHome) {
+    return (
+      <Link
+        href={href}
+        className="back-home-btn btn-press"
+        style={{ width: "100%" }}
+        aria-label={`← ${children}`}
+      >
+        <span className="back-home-btn__arrow" aria-hidden>
+          ←
+        </span>
+        <span className="back-home-btn__label">{children}</span>
+      </Link>
+    );
+  }
+
+  const extraClass = [
+    hideStartSlot ? "story-menu-btn--no-start-slot" : "",
+    hideEndArrow ? "story-menu-btn--no-end-arrow" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <Link href={href} className="story-menu-btn btn-press" style={{ width: "100%" }}>
-      <span className="menu-btn-slot menu-btn-slot--start">{icon ?? null}</span>
+    <Link
+      href={href}
+      className={`story-menu-btn btn-press${extraClass ? ` ${extraClass}` : ""}`}
+      style={{ width: "100%" }}
+    >
+      {!hideStartSlot && (
+        <span className="menu-btn-slot menu-btn-slot--start">{icon ?? null}</span>
+      )}
       <span className="menu-btn-label">{children}</span>
-      <span className="menu-btn-slot menu-btn-slot--end premium-menu-btn__arrow" aria-hidden>
-        ›
-      </span>
+      {!hideEndArrow && (
+        <span className="menu-btn-slot menu-btn-slot--end premium-menu-btn__arrow" aria-hidden>
+          ›
+        </span>
+      )}
     </Link>
   );
 }

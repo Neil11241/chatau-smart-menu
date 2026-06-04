@@ -82,8 +82,8 @@ export default function StoryPage() {
           </p>
         </StorySection>
 
-      <div style={{ marginTop: 24, width: "100%" }}>
-        <StoryMenuLink href="/" icon={<span aria-hidden>←</span>}>
+      <div className="page-back-home-row">
+        <StoryMenuLink href="/" backHome>
           返回首頁
         </StoryMenuLink>
       </div>
