@@ -98,11 +98,7 @@ export function BackButton({
 }) {
   return (
     <Link href={href} className="back-nav-btn btn-press">
-      <span className="menu-btn-slot menu-btn-slot--start" aria-hidden>
-        ←
-      </span>
-      <span className="menu-btn-label">{label}</span>
-      <span className="menu-btn-slot menu-btn-slot--end" aria-hidden />
+      ← {label}
     </Link>
   );
 }

@@ -65,12 +65,12 @@ a {
   text-align: center;
 }
 
-/* Back link — top of page content, scrolls with page */
+/* Back link — top-left of content column, scrolls with page */
 .page-back-row {
   width: 100%;
   max-width: 360px;
   margin: 0 auto 18px;
-  text-align: center;
+  text-align: left;
 }
 
 .page-heading-centered {
@@ -117,10 +117,9 @@ a {
 .back-nav-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   box-sizing: border-box;
-  min-width: 88px;
-  padding: 8px 0;
+  padding: 8px 14px;
   border: 1px solid rgba(184, 138, 59, 0.25);
   border-radius: 12px;
   background: rgba(236, 221, 205, 0.85);

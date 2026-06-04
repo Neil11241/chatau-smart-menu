@@ -1,3 +1,4 @@
+import { CRISPY_CHICKEN_LEG_ROLL } from "./chicken-leg-roll";
 import type { Lang, LocalizedText } from "./types";
 
 export const POPULAR_ADDONS_CATEGORY_ID = "popular-addons";
@@ -55,12 +56,7 @@ export const POPULAR_ADDONS: PopularAddon[] = [
   },
   {
     code: "H",
-    name: {
-      zh: "香酥雞肉捲",
-      en: "Crispy Chicken Roll",
-      ja: "香酥チキンロール",
-      ko: "바삭한 치킨 롤",
-    },
+    name: CRISPY_CHICKEN_LEG_ROLL,
   },
   {
     code: "I",

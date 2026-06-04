@@ -1,3 +1,7 @@
+import {
+  CRISPY_CHICKEN_LEG_ROLL,
+  formatAddonItemLabel,
+} from "./chicken-leg-roll";
 import type { Lang } from "./types";
 
 export type SignatureSidesReference = {
@@ -17,7 +21,7 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
       "E｜東石鮮蚵湯",
       "F｜苦瓜封湯",
       "G｜東石芥末鮮蚵",
-      "H｜香酥雞肉捲",
+      formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "zh"),
     ],
     footnote: "請於紙本菜單上勾選對應代碼。",
   },
@@ -30,7 +34,7 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
       "E｜Dongshi Fresh Oyster Soup",
       "F｜Bitter Melon Sealed Soup",
       "G｜Dongshi Mustard Fresh Oysters",
-      "H｜Crispy Chicken Roll",
+      formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "en"),
     ],
     footnote:
       "To add any item, please mark the corresponding code on the paper menu.",
@@ -44,7 +48,7 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
       "E｜東石の鮮蚵スープ",
       "F｜苦瓜封湯",
       "G｜東石の芥子味鮮蚵",
-      "H｜香酥チキンロール",
+      formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "ja"),
     ],
     footnote:
       "ご希望の場合は、紙のメニューに対応する記号をご記入ください。",
@@ -58,7 +62,7 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
       "E｜동스 생굴 국",
       "F｜여주 봉탕",
       "G｜동스 겨자 생굴",
-      "H｜바삭한 치킨 롤",
+      formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "ko"),
     ],
     footnote:
       "원하시면 종이 메뉴에 해당 코드를 표시해 주세요.",

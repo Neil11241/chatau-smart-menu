@@ -1,3 +1,4 @@
+import { FRIED_CHICKEN_LEG_ROLL } from "./chicken-leg-roll";
 import type { Category, Combo } from "./types";
 
 export const CATEGORIES: Category[] = [
@@ -148,15 +149,15 @@ export const COMBOS: Combo[] = [
       ko: "CHATAU 시그니처 세트",
     },
     items: {
-      zh: ["大火雞肉飯", "炸腿肉捲", "荷包蛋", "味噌湯"],
+      zh: ["大火雞肉飯", FRIED_CHICKEN_LEG_ROLL.zh, "荷包蛋", "味噌湯"],
       en: [
         "Large Turkey Rice",
-        "Fried leg meat roll",
+        FRIED_CHICKEN_LEG_ROLL.en,
         "Sunny-side up egg",
         "Miso soup",
       ],
-      ja: ["大火鶏肉飯", "揚げもも肉巻き", "目玉焼き", "味噌汁"],
-      ko: ["대불고기밥", "튀긴 다리살 롤", "계란후라이", "미소국"],
+      ja: ["大火鶏肉飯", FRIED_CHICKEN_LEG_ROLL.ja, "目玉焼き", "味噌汁"],
+      ko: ["대불고기밥", FRIED_CHICKEN_LEG_ROLL.ko, "계란후라이", "미소국"],
     },
   },
   {
@@ -209,15 +210,15 @@ export const COMBOS: Combo[] = [
       ko: "든든 세트",
     },
     items: {
-      zh: ["大火雞肉飯", "炸腿肉捲", "荷包蛋", "味噌湯"],
+      zh: ["大火雞肉飯", FRIED_CHICKEN_LEG_ROLL.zh, "荷包蛋", "味噌湯"],
       en: [
         "Large Turkey Rice",
-        "Fried leg meat roll",
+        FRIED_CHICKEN_LEG_ROLL.en,
         "Sunny-side up egg",
         "Miso soup",
       ],
-      ja: ["大火鶏肉飯", "揚げもも肉巻き", "目玉焼き", "味噌汁"],
-      ko: ["대불고기밥", "튀긴 다리살 롤", "계란후라이", "미소국"],
+      ja: ["大火鶏肉飯", FRIED_CHICKEN_LEG_ROLL.ja, "目玉焼き", "味噌汁"],
+      ko: ["대불고기밥", FRIED_CHICKEN_LEG_ROLL.ko, "계란후라이", "미소국"],
     },
   },
   {
