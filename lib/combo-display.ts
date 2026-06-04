@@ -5,10 +5,10 @@ const COMBO_SUBTITLE: Record<string, string> = {
   "chatau-classic": "CHATAU CLASSIC SET",
   "chatau-popular": "CHATAU POPULAR SET",
   "chatau-signature": "CHATAU SIGNATURE SET",
-  "popular-first": "CHATAU NO.1 POPULAR SET",
+  "popular-first": "CHATAU MAKE IT LIGHT SET",
   "bento-set": "CHATAU BENTO EXPERIENCE",
-  "hearty-set": "CHATAU HEARTY SET",
-  "light-set": "CHATAU REFRESHING SET",
+  "hearty-set": "CHATAU MAKE IT FULL SET",
+  "light-set": "CHATAU MOST POPULAR SET",
   "value-set": "CHATAU VALUE SET",
   "boss-pick-set": "CHATAU OWNER'S CHOICE",
 };

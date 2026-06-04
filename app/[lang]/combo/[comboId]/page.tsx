@@ -41,7 +41,11 @@ export default async function ComboPage({ params }: Props) {
 
         <ImagePlaceholder lang={lang} />
 
-        <ComboContentsCard title={ui.comboContents} items={items} />
+        <ComboContentsCard
+          title={ui.comboContents}
+          items={items}
+          relaxedSpacing={combo.categoryId === "first-time"}
+        />
 
         {bossTip && (
           <>

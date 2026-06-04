@@ -7,6 +7,7 @@ import { getDrinkReference } from "@/lib/drinks";
 import { getDongshiRegionNote } from "@/lib/dongshi-oyster";
 import { getSignatureSides } from "@/lib/signature-sides";
 import { getBossPickTip, hasBossPickTip } from "@/lib/boss-pick-tip";
+import { getFullyCookedEggNote } from "@/lib/fully-cooked-egg-note";
 import { getUi, formatPaperMenuCheck } from "@/lib/i18n";
 import type { Lang } from "@/lib/types";
 import {
@@ -44,6 +45,7 @@ export default async function ResultPage({ params }: Props) {
   const signatureSides = getSignatureSides(lang);
   const dongshiRegionNote = getDongshiRegionNote(lang);
   const bossTip = hasBossPickTip(combo.id) ? getBossPickTip(lang) : null;
+  const fullyCookedEggNote = getFullyCookedEggNote(lang);
   return (
     <InnerPage backHref={backHref} backLabel={ui.back}>
       <PageSection gap={14} className="result-page-section">
@@ -62,7 +64,13 @@ export default async function ResultPage({ params }: Props) {
 
         <ImagePlaceholder lang={lang} />
 
-        <ComboContentsCard title={ui.comboContents} items={items} />
+        <ComboContentsCard
+          title={ui.comboContents}
+          items={items}
+          relaxedSpacing={combo.categoryId === "first-time"}
+        />
+
+        <p className="combo-egg-preference-note">{fullyCookedEggNote}</p>
 
         <DrinkAbSection
           title={drinkReference.title}

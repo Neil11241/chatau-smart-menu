@@ -483,23 +483,33 @@ export function ComboMenuTitle({
 export function ComboContentsCard({
   title,
   items,
+  relaxedSpacing = false,
 }: {
   title: string;
   items: string[];
+  /** First-time category only — looser vertical rhythm */
+  relaxedSpacing?: boolean;
 }) {
+  const itemGap = relaxedSpacing ? 28 : 18;
+  const itemLineHeight = relaxedSpacing ? 2.45 : 2;
+
   return (
     <section
-      className="combo-contents-menu"
+      className={
+        relaxedSpacing
+          ? "combo-contents-menu combo-contents-menu--first-time"
+          : "combo-contents-menu"
+      }
       style={{
         ...menuPaperCard,
-        padding: "20px 24px 22px",
+        padding: relaxedSpacing ? "24px 24px 28px" : "20px 24px 22px",
         textAlign: "center",
       }}
     >
       <MenuGoldLine />
       <p
         style={{
-          margin: "16px 0 18px",
+          margin: relaxedSpacing ? "16px 0 22px" : "16px 0 18px",
           fontSize: typeScale.small,
           fontWeight: 500,
           color: colors.gold,
@@ -510,7 +520,7 @@ export function ComboContentsCard({
       </p>
       <ul
         style={{
-          margin: "0 0 14px",
+          margin: relaxedSpacing ? "0 0 18px" : "0 0 14px",
           padding: 0,
           listStyle: "none",
         }}
@@ -519,10 +529,10 @@ export function ComboContentsCard({
           <li
             key={item}
             style={{
-              marginBottom: i < items.length - 1 ? 18 : 0,
+              marginBottom: i < items.length - 1 ? itemGap : 0,
               fontSize: typeScale.body,
               color: colors.text,
-              lineHeight: 2,
+              lineHeight: itemLineHeight,
               letterSpacing: "0.03em",
             }}
           >

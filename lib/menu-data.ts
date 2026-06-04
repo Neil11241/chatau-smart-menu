@@ -1,4 +1,6 @@
 import { FRIED_CHICKEN_LEG_ROLL } from "./chicken-leg-roll";
+import { MILKFISH_SOUP } from "./milkfish-soup";
+import { SOFT_BOILED_EGG } from "./soft-boiled-egg";
 import type { Category, Combo } from "./types";
 
 export const CATEGORIES: Category[] = [
@@ -105,15 +107,10 @@ export const COMBOS: Combo[] = [
       ko: "CHATAU 클래식 세트",
     },
     items: {
-      zh: ["大火雞肉飯（腿肉）", "荷包蛋", "燙青菜", "蛤蜊湯"],
-      en: [
-        "Large Turkey Rice (leg meat)",
-        "Sunny-side up egg",
-        "Blanched greens",
-        "Clam soup",
-      ],
-      ja: ["大火鶏肉飯（もも肉）", "目玉焼き", "茹で野菜", "あさりスープ"],
-      ko: ["대불고기밥 (다리살)", "계란후라이", "데친 나물", "조개탕"],
+      zh: ["小火雞肉飯", SOFT_BOILED_EGG.zh, "燙青菜", "蛤蜊湯"],
+      en: ["Small Turkey Rice", SOFT_BOILED_EGG.en, "Blanched greens", "Clam soup"],
+      ja: ["小火鶏肉飯", SOFT_BOILED_EGG.ja, "茹で野菜", "あさりスープ"],
+      ko: ["소불고기밥", SOFT_BOILED_EGG.ko, "데친 나물", "조개탕"],
     },
   },
   {
@@ -127,15 +124,10 @@ export const COMBOS: Combo[] = [
       ko: "CHATAU 인기 세트",
     },
     items: {
-      zh: ["雞片飯", "荷包蛋", "燙青菜", "味噌湯"],
-      en: [
-        "Sliced Chicken Rice",
-        "Sunny-side up egg",
-        "Blanched greens",
-        "Miso soup",
-      ],
-      ja: ["鶏スライス飯", "目玉焼き", "茹で野菜", "味噌汁"],
-      ko: ["닭슬라이스밥", "계란후라이", "데친 나물", "미소국"],
+      zh: ["大火雞肉飯", SOFT_BOILED_EGG.zh, "燙青菜", "味噌湯"],
+      en: ["Large Turkey Rice", SOFT_BOILED_EGG.en, "Blanched greens", "Miso soup"],
+      ja: ["大火鶏肉飯", SOFT_BOILED_EGG.ja, "茹で野菜", "味噌汁"],
+      ko: ["대불고기밥", SOFT_BOILED_EGG.ko, "데친 나물", "미소국"],
     },
   },
   {
@@ -149,37 +141,32 @@ export const COMBOS: Combo[] = [
       ko: "CHATAU 시그니처 세트",
     },
     items: {
-      zh: ["大火雞肉飯", FRIED_CHICKEN_LEG_ROLL.zh, "荷包蛋", "味噌湯"],
-      en: [
-        "Large Turkey Rice",
-        FRIED_CHICKEN_LEG_ROLL.en,
-        "Sunny-side up egg",
-        "Miso soup",
-      ],
-      ja: ["大火鶏肉飯", FRIED_CHICKEN_LEG_ROLL.ja, "目玉焼き", "味噌汁"],
-      ko: ["대불고기밥", FRIED_CHICKEN_LEG_ROLL.ko, "계란후라이", "미소국"],
+      zh: ["雞片飯", SOFT_BOILED_EGG.zh, "燙青菜", "味噌湯"],
+      en: ["Sliced Chicken Rice", SOFT_BOILED_EGG.en, "Blanched greens", "Miso soup"],
+      ja: ["鶏スライス飯", SOFT_BOILED_EGG.ja, "茹で野菜", "味噌汁"],
+      ko: ["닭슬라이스밥", SOFT_BOILED_EGG.ko, "데친 나물", "미소국"],
     },
   },
   {
     id: "popular-first",
     number: 4,
-    categoryId: "most-popular",
+    categoryId: "light",
     name: {
-      zh: "人氣第一套餐",
-      en: "No.1 Popular Set",
-      ja: "人気No.1セット",
-      ko: "인기 1위 세트",
+      zh: "想吃清爽套餐",
+      en: "Make it Light Set",
+      ja: "さっぱりセット",
+      ko: "가볍게 세트",
     },
     items: {
-      zh: ["雞片飯", "荷包蛋", "鮮炒蔬菜", "味噌湯"],
+      zh: ["小火雞肉飯", SOFT_BOILED_EGG.zh, "鮮炒蔬菜", "味噌湯"],
       en: [
-        "Sliced Chicken Rice",
-        "Sunny-side up egg",
+        "Small Turkey Rice",
+        SOFT_BOILED_EGG.en,
         "Stir-fried vegetables",
         "Miso soup",
       ],
-      ja: ["鶏スライス飯", "目玉焼き", "炒め野菜", "味噌汁"],
-      ko: ["닭슬라이스밥", "계란후라이", "볶음 채소", "미소국"],
+      ja: ["小火鶏肉飯", SOFT_BOILED_EGG.ja, "炒め野菜", "味噌汁"],
+      ko: ["소불고기밥", SOFT_BOILED_EGG.ko, "볶음 채소", "미소국"],
     },
   },
   {
@@ -193,10 +180,10 @@ export const COMBOS: Combo[] = [
       ko: "대만 도시락 체험 세트",
     },
     items: {
-      zh: ["火雞肉飯便當", "荷包蛋", "味噌湯"],
-      en: ["Turkey Rice Bento", "Fried Egg", "Miso Soup"],
-      ja: ["ターキーライス弁当", "目玉焼き", "味噌汁"],
-      ko: ["칠면조고기 덮밥 도시락", "계란 프라이", "미소국"],
+      zh: ["火雞肉飯便當", SOFT_BOILED_EGG.zh, "味噌湯"],
+      en: ["Turkey Rice Bento", SOFT_BOILED_EGG.en, "Miso Soup"],
+      ja: ["ターキーライス弁当", SOFT_BOILED_EGG.ja, "味噌汁"],
+      ko: ["칠면조고기 덮밥 도시락", SOFT_BOILED_EGG.ko, "미소국"],
     },
   },
   {
@@ -204,43 +191,53 @@ export const COMBOS: Combo[] = [
     number: 5,
     categoryId: "fill-up",
     name: {
-      zh: "飽足套餐",
-      en: "Hearty Set",
-      ja: "満足セット",
-      ko: "든든 세트",
+      zh: "想吃飽套餐",
+      en: "Make it Full Set",
+      ja: "お腹いっぱいセット",
+      ko: "배부르게 세트",
     },
     items: {
-      zh: ["大火雞肉飯", FRIED_CHICKEN_LEG_ROLL.zh, "荷包蛋", "味噌湯"],
+      zh: [
+        "大火雞肉飯",
+        FRIED_CHICKEN_LEG_ROLL.zh,
+        SOFT_BOILED_EGG.zh,
+        MILKFISH_SOUP.zh,
+      ],
       en: [
         "Large Turkey Rice",
         FRIED_CHICKEN_LEG_ROLL.en,
-        "Sunny-side up egg",
-        "Miso soup",
+        SOFT_BOILED_EGG.en,
+        MILKFISH_SOUP.en,
       ],
-      ja: ["大火鶏肉飯", FRIED_CHICKEN_LEG_ROLL.ja, "目玉焼き", "味噌汁"],
-      ko: ["대불고기밥", FRIED_CHICKEN_LEG_ROLL.ko, "계란후라이", "미소국"],
+      ja: [
+        "大火鶏肉飯",
+        FRIED_CHICKEN_LEG_ROLL.ja,
+        SOFT_BOILED_EGG.ja,
+        MILKFISH_SOUP.ja,
+      ],
+      ko: [
+        "대불고기밥",
+        FRIED_CHICKEN_LEG_ROLL.ko,
+        SOFT_BOILED_EGG.ko,
+        MILKFISH_SOUP.ko,
+      ],
     },
   },
   {
     id: "light-set",
     number: 6,
-    categoryId: "light",
+    categoryId: "most-popular",
     name: {
-      zh: "清爽套餐",
-      en: "Refreshing Set",
-      ja: "さっぱりセット",
-      ko: "상큼 세트",
+      zh: "最多人點套餐",
+      en: "Most Popular Set",
+      ja: "人気メニューセット",
+      ko: "인기 메뉴 세트",
     },
     items: {
-      zh: ["小火雞肉飯", "燙青菜", "荷包蛋", "味噌湯"],
-      en: [
-        "Small Turkey Rice",
-        "Blanched greens",
-        "Sunny-side up egg",
-        "Miso soup",
-      ],
-      ja: ["小火鶏肉飯", "茹で野菜", "目玉焼き", "味噌汁"],
-      ko: ["소불고기밥", "데친 나물", "계란후라이", "미소국"],
+      zh: ["雞片飯", SOFT_BOILED_EGG.zh, "燙青菜", "蛤蜊湯"],
+      en: ["Sliced Chicken Rice", SOFT_BOILED_EGG.en, "Blanched greens", "Clam soup"],
+      ja: ["鶏スライス飯", SOFT_BOILED_EGG.ja, "茹で野菜", "あさりスープ"],
+      ko: ["닭슬라이스밥", SOFT_BOILED_EGG.ko, "데친 나물", "조개탕"],
     },
   },
   {
@@ -254,15 +251,10 @@ export const COMBOS: Combo[] = [
       ko: "가성비 세트",
     },
     items: {
-      zh: ["小火雞肉飯", "滷豆腐", "荷包蛋", "味噌湯"],
-      en: [
-        "Small Turkey Rice",
-        "Braised tofu",
-        "Sunny-side up egg",
-        "Miso soup",
-      ],
-      ja: ["小火鶏肉飯", "煮込み豆腐", "目玉焼き", "味噌汁"],
-      ko: ["소불고기밥", "두부조림", "계란후라이", "미소국"],
+      zh: ["小火雞肉飯", "滷豆腐", SOFT_BOILED_EGG.zh, "味噌湯"],
+      en: ["Small Turkey Rice", "Braised tofu", SOFT_BOILED_EGG.en, "Miso soup"],
+      ja: ["小火鶏肉飯", "煮込み豆腐", SOFT_BOILED_EGG.ja, "味噌汁"],
+      ko: ["소불고기밥", "두부조림", SOFT_BOILED_EGG.ko, "미소국"],
     },
   },
   {
@@ -277,25 +269,10 @@ export const COMBOS: Combo[] = [
       ko: "CHATAU 사장 추천",
     },
     items: {
-      zh: ["大火雞肉飯（腿肉）", "半熟荷包蛋", "燙青菜", "蛤蜊湯"],
-      en: [
-        "Large Turkey Rice (leg meat)",
-        "Soft-boiled egg",
-        "Blanched greens",
-        "Clam soup",
-      ],
-      ja: [
-        "大火鶏肉飯（もも肉）",
-        "半熟目玉焼き",
-        "茹で野菜",
-        "あさりスープ",
-      ],
-      ko: [
-        "대불고기밥 (다리살)",
-        "반숙 계란",
-        "데친 나물",
-        "조개탕",
-      ],
+      zh: ["大火雞肉飯", SOFT_BOILED_EGG.zh, "燙青菜", "蛤蜊湯"],
+      en: ["Large Turkey Rice", SOFT_BOILED_EGG.en, "Blanched greens", "Clam soup"],
+      ja: ["大火鶏肉飯", SOFT_BOILED_EGG.ja, "茹で野菜", "あさりスープ"],
+      ko: ["대불고기밥", SOFT_BOILED_EGG.ko, "데친 나물", "조개탕"],
     },
   },
 ];
