@@ -734,16 +734,29 @@ export function PopularAddonCard({
   code,
   name,
   imageLabel,
+  imageSrc,
 }: {
   code: string;
   name: string;
   imageLabel: string;
+  imageSrc?: string;
 }) {
   return (
     <article className="popular-addon-card menu-paper-card">
-      <div className="popular-addon-card__image" aria-hidden>
-        <span className="popular-addon-card__image-text">{imageLabel}</span>
-      </div>
+      {imageSrc ? (
+        <figure className="popular-addon-card__figure">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={imageSrc}
+            alt=""
+            className="popular-addon-card__photo"
+          />
+        </figure>
+      ) : (
+        <div className="popular-addon-card__image" aria-hidden>
+          <span className="popular-addon-card__image-text">{imageLabel}</span>
+        </div>
+      )}
       <p className="popular-addon-card__name">
         {code}｜{name}
       </p>

@@ -9,6 +9,7 @@ import {
   getAddonPageFootnote,
 } from "@/lib/addon-items";
 import { getDongshiRegionNote } from "@/lib/dongshi-oyster";
+import { getComboPickHref } from "@/lib/navigation";
 import { isValidLang, t, tList, formatSetNumber } from "@/lib/locales";
 import { getUi } from "@/lib/i18n";
 import type { Lang } from "@/lib/types";
@@ -65,6 +66,7 @@ export default async function CategoryPage({ params }: Props) {
                 code={addon.code}
                 name={t(addon.name, lang)}
                 imageLabel={ADDON_IMAGE_LABEL[lang]}
+                imageSrc={addon.imageSrc}
               />
             </li>
           ))}
@@ -110,7 +112,7 @@ export default async function CategoryPage({ params }: Props) {
         {combos.map((combo) => (
           <li key={combo.id}>
             <ComboListCardLink
-              href={`/${lang}/combo/${combo.id}`}
+              href={getComboPickHref(lang, combo)}
               title={`${formatSetNumber(combo.number, lang, { bossPick: combo.bossPick })} — ${t(combo.name, lang)}`}
               items={tList(combo.items, lang)}
               lang={lang}

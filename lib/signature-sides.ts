@@ -1,8 +1,10 @@
 import { BRAISED_MILKFISH_BELLY } from "./braised-milkfish-belly";
+import { BLANCHED_GREENS } from "./blanched-greens";
 import {
   CRISPY_CHICKEN_LEG_ROLL,
   formatAddonItemLabel,
 } from "./chicken-leg-roll";
+import { DONGSHI_FIVE_FLAVOR_OYSTERS } from "./dongshi-five-flavor-oysters";
 import { STUFFED_BITTER_MELON } from "./stuffed-bitter-melon";
 import { WASABI_OYSTERS } from "./wasabi-oysters";
 import type { Lang } from "./types";
@@ -25,6 +27,8 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
       formatAddonItemLabel("F", STUFFED_BITTER_MELON, "zh"),
       "G｜東石芥末鮮蚵",
       formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "zh"),
+      formatAddonItemLabel("K", BLANCHED_GREENS, "zh"),
+      formatAddonItemLabel("L", DONGSHI_FIVE_FLAVOR_OYSTERS, "zh"),
     ],
     footnote: "請於紙本菜單上勾選對應代碼。",
   },
@@ -38,6 +42,8 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
       formatAddonItemLabel("F", STUFFED_BITTER_MELON, "en"),
       formatAddonItemLabel("G", WASABI_OYSTERS, "en"),
       formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "en"),
+      formatAddonItemLabel("K", BLANCHED_GREENS, "en"),
+      formatAddonItemLabel("L", DONGSHI_FIVE_FLAVOR_OYSTERS, "en"),
     ],
     footnote:
       "To add any item, please mark the corresponding code on the paper menu.",
@@ -52,6 +58,8 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
       formatAddonItemLabel("F", STUFFED_BITTER_MELON, "ja"),
       formatAddonItemLabel("G", WASABI_OYSTERS, "ja"),
       formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "ja"),
+      formatAddonItemLabel("K", BLANCHED_GREENS, "ja"),
+      formatAddonItemLabel("L", DONGSHI_FIVE_FLAVOR_OYSTERS, "ja"),
     ],
     footnote:
       "ご希望の場合は、紙のメニューに対応する記号をご記入ください。",
@@ -66,6 +74,8 @@ export const SIGNATURE_SIDES: Record<Lang, SignatureSidesReference> = {
       formatAddonItemLabel("F", STUFFED_BITTER_MELON, "ko"),
       "G｜동스 겨자 생굴",
       formatAddonItemLabel("H", CRISPY_CHICKEN_LEG_ROLL, "ko"),
+      formatAddonItemLabel("K", BLANCHED_GREENS, "ko"),
+      formatAddonItemLabel("L", DONGSHI_FIVE_FLAVOR_OYSTERS, "ko"),
     ],
     footnote:
       "원하시면 종이 메뉴에 해당 코드를 표시해 주세요.",

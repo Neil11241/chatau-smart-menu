@@ -1,5 +1,10 @@
 import { BRAISED_MILKFISH_BELLY } from "./braised-milkfish-belly";
+import { BLANCHED_GREENS, BLANCHED_GREENS_IMAGE } from "./blanched-greens";
 import { CRISPY_CHICKEN_LEG_ROLL } from "./chicken-leg-roll";
+import {
+  DONGSHI_FIVE_FLAVOR_OYSTERS,
+  DONGSHI_FIVE_FLAVOR_OYSTERS_IMAGE,
+} from "./dongshi-five-flavor-oysters";
 import { STUFFED_BITTER_MELON } from "./stuffed-bitter-melon";
 import { WASABI_OYSTERS } from "./wasabi-oysters";
 import type { Lang, LocalizedText } from "./types";
@@ -9,6 +14,7 @@ export const POPULAR_ADDONS_CATEGORY_ID = "popular-addons";
 export type PopularAddon = {
   code: string;
   name: LocalizedText;
+  imageSrc?: string;
 };
 
 export const POPULAR_ADDONS: PopularAddon[] = [
@@ -63,6 +69,16 @@ export const POPULAR_ADDONS: PopularAddon[] = [
       ja: "煮込み豆腐",
       ko: "두부 조림",
     },
+  },
+  {
+    code: "K",
+    name: BLANCHED_GREENS,
+    imageSrc: BLANCHED_GREENS_IMAGE,
+  },
+  {
+    code: "L",
+    name: DONGSHI_FIVE_FLAVOR_OYSTERS,
+    imageSrc: DONGSHI_FIVE_FLAVOR_OYSTERS_IMAGE,
   },
 ];
 
